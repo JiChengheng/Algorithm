@@ -39,9 +39,6 @@ private:
 			child_right = futher * 2 + 2;
 		}
 	}
-
-
-
 public:
 	void insert(T item) {
 		vec.push_back(item);
@@ -57,7 +54,7 @@ public:
 		return temp;
 
 	}
-	 T& getMax() {
+	 const T& getMax() {
 		return *vec.begin();
 	}
 	void buildMinHeap(const vector<T> &data) {
