@@ -1,8 +1,4 @@
-#include <vector>
-#include <string>
-#include <iostream>
-#include <algorithm>
-using namespace std;
+#include "st.h"
 
 /*
 *
@@ -91,29 +87,29 @@ public:
 };
 
 
-
-
-
 void main() {
 
 
 	vector<int> vecs = { 16,7,3,20,17,8 };
 	/*
-		for (vector<int>::iterator it = vecs.begin(); it < vecs.end(); it++)
-			*it = rand()%50;*/
+	for (vector<int>::iterator it = vecs.begin(); it < vecs.end(); it++)
+	*it = rand()%50;*/
 
 	HE<int> heap;
-	vector<int> sorted=heap.sort(vecs);
+	vector<int> sorted = heap.sort(vecs);
 
 
 	cout << endl;
-		for (int i = 0; i < 6; i++) {
-			
-			cout << sorted[i] << endl;
-		}
+	for (int i = 0; i < 6; i++) {
+
+		cout << sorted[i] << endl;
+	}
 
 
 }
+
+
+
 
 
 
