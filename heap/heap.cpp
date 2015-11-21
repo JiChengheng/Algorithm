@@ -12,7 +12,7 @@ heapify：使删除堆顶元素的堆再次成为堆。
 */
 
 template<typename T>
-class HE {
+class Heap {
 private:
 	vector<T> vec;
 	int size = 0;
@@ -92,7 +92,7 @@ void main() {
 	for (vector<int>::iterator it = vecs.begin(); it < vecs.end(); it++)
 	*it = rand()%50;*/
 
-	HE<int> heap;
+	Heap<int> heap;
 	vector<int> sorted = heap.sort(vecs);
 
 
