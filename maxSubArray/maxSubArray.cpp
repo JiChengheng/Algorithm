@@ -31,12 +31,19 @@ void maxCross(const vector<int>& vec, int& sum, int& l, int& r, int mid) {  //利
 
 }
 void maxSubArray(const vector<int>&vec, int& sum, int& left, int& right) {
-	if (left >= right) return;
+	if (left > right||left>=vec.size()) return;//由于是左闭右包，而对于右半边rl=mid+1,所以会出现left越界的情况
+	else if (left==right)
+	{
+		sum = vec[left];
+		right += 1;        //这是为了处理ll=lr  则应该返回（vec[ll],ll,lr+1）
+		return;
+	}
+	
 	int mid = (right + left) / 2;
-	int ll = left, lr = mid - 1;
+	int ll = left, lr = mid ;
 	int rl = mid + 1, rr = right;
 	int cl = left, cr = right;
-	int sum1, sum2, sum3;
+	int sum1=INT_MIN, sum2= INT_MIN, sum3= INT_MIN;
 	maxSubArray(vec, sum1, ll, lr);  //利用引用返回多个返回值 在递归时，内部一定要递归定义局部变量
 	maxSubArray(vec, sum2, rl, rr);
 	maxCross(vec, sum3, cl, cr, mid);
