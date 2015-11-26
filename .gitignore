@@ -9,8 +9,8 @@
 */*.vcxproj.filters
 */*.vcxproj
 */*.opensdf
-*/*.sdf
-*/*.sln
+*.sdf
+*.sln
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
